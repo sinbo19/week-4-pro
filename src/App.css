@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f5f3ff;
+  color: #24213b;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header {
+  background: #6d4aff;
+  color: white;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #c9c3e8;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.theme-button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6d4aff;
+  color: white;
+  cursor: pointer;
+}
+
+.theme-button:hover {
+  background: #5033c5;
+}
+
+.student-count {
+  color: #68627e;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.student-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 12px #29204a12;
+  overflow-wrap: anywhere;
+}
+
+.student-avatar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e5ddff;
+  color: #5033c5;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.student-info h2 {
+  margin: 0 0 12px;
+}
+
+.student-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.empty-message {
+  padding: 24px;
+  text-align: center;
+}
+
+.dark-mode {
+  background: #171526;
+  color: #f5f3ff;
+}
+
+.dark-mode .student-card {
+  background: #28243d;
+  color: #f5f3ff;
+}
+
+.dark-mode .student-count {
+  color: #c3bddc;
+}
+
+.dark-mode .search-input {
+  background: #28243d;
+  color: white;
+  border-color: #554b79;
+}
+
+.dark-mode .search-input::placeholder {
+  color: #c3bddc;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .theme-button {
+    width: 100%;
+  }
+
+  .student-list {
+    grid-template-columns: 1fr;
+  }
+}
